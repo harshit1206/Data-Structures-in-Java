@@ -1,8 +1,4 @@
-Yes — that's a better format for your GitHub notes. Instead of explaining every function separately, keep the **concept explanation short** and put all the commonly used functions in **one reference table**.
 
-Here's the revised copyable section:
-
-````markdown
 # ArrayList in Java
 
 `ArrayList` is a resizable array in Java. Unlike normal arrays, its size can grow or shrink dynamically when elements are added or removed.
