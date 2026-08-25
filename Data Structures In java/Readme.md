@@ -184,4 +184,6 @@ public class HashSets {
 | Order        | Maintains insertion order | No guaranteed order           |
 | Main use     | Store/access elements     | Fast lookup + unique elements |
 
-**DSA tip:** When you see a problem involving **"duplicates", "already seen", "exists or not"**, think **HashSets**.
+When you see a problem involving **"duplicates", "already seen", "exists or not"**, think **HashSets**.
+
+[Click here to view the complete code → `HashSets.java`](HashSets.java)
