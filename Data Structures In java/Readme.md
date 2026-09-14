@@ -187,3 +187,144 @@ public class HashSets {
 When you see a problem involving **"duplicates", "already seen", "exists or not"**, think **HashSets**.
 
 [Click here to view the complete code → `HashSets.java`](HashSets.java)
+
+
+
+#Strings in Java
+
+A `String` is a sequence of characters in Java.
+
+## Declaration
+
+```java
+String name = "Tony";
+```
+
+## Taking Input
+
+```java
+Scanner sc = new Scanner(System.in);
+String name = sc.next();
+```
+
+---
+
+## Common String Functions
+
+| Function | Example | Brief Explanation |
+| -------- | ------- | ----------------- |
+| `length()` | `str.length();` | Returns the length of the String. |
+| `charAt(index)` | `str.charAt(2);` | Returns the character at the given index. |
+| `equals(str)` | `str1.equals(str2);` | Compares the contents of two Strings. |
+| `substring(start, end)` | `str.substring(0, 4);` | Returns a part of the String. |
+| `parseInt()` | `Integer.parseInt(str);` | Converts String to `int`. |
+| `toString()` | `Integer.toString(num);` | Converts `int` to String. |
+
+---
+
+## Concatenation
+
+Concatenation means joining two Strings.
+
+```java
+String firstName = "Tony";
+String secondName = "Stark";
+
+String fullName = firstName + " " + secondName;
+
+System.out.println(fullName);
+```
+
+Output:
+
+```text
+Tony Stark
+```
+
+---
+
+## Print Length
+
+```java
+String name = "Tony";
+
+System.out.println(name.length());
+```
+
+---
+
+## Access Characters
+
+String indexing starts from `0`.
+
+```java
+String name = "Tony";
+
+for(int i = 0; i < name.length(); i++) {
+    System.out.println(name.charAt(i));
+}
+```
+
+---
+
+# Comparing Strings
+
+Use `.equals()` to compare String contents.
+
+```java
+String name1 = "Tony";
+String name2 = "Tony";
+
+if(name1.equals(name2)) {
+    System.out.println("They are the same string");
+}
+```
+
+> **Do not use `==` to check String equality.**
+
+`==` checks references, while `.equals()` checks the String contents.
+
+---
+
+# Substring
+
+A substring is a subpart of a String.
+
+```java
+String name = "TonyStark";
+
+System.out.println(name.substring(0, 4));
+```
+
+Output:
+
+```text
+Tony
+```
+
+> The `end` index is excluded.
+
+---
+
+# String ↔ Integer
+
+## String → int
+
+```java
+String str = "123";
+
+int number = Integer.parseInt(str);
+```
+
+## int → String
+
+```java
+int number = 123;
+
+String str = Integer.toString(number);
+```
+
+---
+## Note: Strings are Immutable
+
+[Click here to view the complete code → `Strings.java`](Strings.java)
