@@ -328,3 +328,103 @@ String str = Integer.toString(number);
 ## Note: Strings are Immutable
 
 [Click here to view the complete code → `Strings.java`](Strings.java)
+
+
+# 1. StringBuilder in Java
+
+`StringBuilder` is used to create and modify strings efficiently.
+
+Unlike `String`, a `StringBuilder` is **mutable**, which means its contents can be changed directly.
+
+## Creating a StringBuilder
+
+```java
+StringBuilder sb = new StringBuilder("Harshit Dutta");
+System.out.println(sb);
+```
+
+---
+
+## Common StringBuilder Functions
+
+| Function               | Example                 | Brief Explanation                             |
+| ---------------------- | ----------------------- | --------------------------------------------- |
+| `charAt(index)`        | `sb.charAt(0);`         | Returns the character at the given index.     |
+| `setCharAt(index, ch)` | `sb.setCharAt(0, 'P');` | Replaces the character at the given index.    |
+| `insert(index, ch)`    | `sb.insert(0, 'S');`    | Inserts a character at a specific index.      |
+| `delete(start, end)`   | `sb.delete(0, 1);`      | Deletes characters from `start` to `end - 1`. |
+| `append(x)`            | `sb.append(" Stark");`  | Adds data at the end.                         |
+| `length()`             | `sb.length();`          | Returns the length of the StringBuilder.      |
+
+---
+
+## Append
+
+`append()` adds something at the end of the StringBuilder.
+
+```java
+StringBuilder sb = new StringBuilder("Tony");
+sb.append(" Stark");
+System.out.println(sb);
+```
+
+Output:
+
+```text
+Tony Stark
+```
+
+---
+
+## Reverse a String
+
+A StringBuilder can be reversed by swapping characters from both ends.
+
+### Logic
+
+* `front` starts from the beginning.
+* `back` starts from the end.
+* Swap the two characters.
+* Continue until the middle.
+
+```java
+StringBuilder sb = new StringBuilder("HelloWorld");
+
+for(int i = 0; i < sb.length() / 2; i++) {
+
+    int front = i;
+    int back = sb.length() - i - 1;
+
+    char frontChar = sb.charAt(front);
+    char backChar = sb.charAt(back);
+
+    sb.setCharAt(front, backChar);
+    sb.setCharAt(back, frontChar);
+}
+
+System.out.println(sb);
+```
+
+Output:
+
+```text
+dlroWolleH
+```
+
+---
+
+## String vs StringBuilder
+
+|              | String                   | StringBuilder                 |
+| ------------ | ------------------------ | ----------------------------- |
+| Mutable      | ❌ No                     | ✅ Yes                         |
+| Modification | Creates a new String     | Modifies existing object      |
+| Useful for   | Normal String operations | Frequent String modifications |
+
+> **Remember:** `String` is immutable, while `StringBuilder` is mutable.
+
+---
+
+[Click here to view the complete code → `StringBuilder.java`](StringBuilders.java)
+
+---
