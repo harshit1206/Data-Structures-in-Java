@@ -190,7 +190,7 @@ When you see a problem involving **"duplicates", "already seen", "exists or not"
 
 
 
-#Strings in Java
+# Strings in Java
 
 A `String` is a sequence of characters in Java.
 
