@@ -87,14 +87,23 @@ WHERE CHAR_LENGTH(content) > 15;
 
 ---
 
-## Quick Revision
+## 6. 175. Combine Two Tables
 
-| Concept | Use |
-|---|---|
-| `WHERE` | Filters rows using a condition |
-| `AND` | All conditions must be true |
-| `OR` | At least one condition must be true |
-| `IS NULL` | Checks for missing (`NULL`) values |
-| `DISTINCT` | Removes duplicate results |
-| `ORDER BY ... ASC` | Sorts in ascending order |
-| `CHAR_LENGTH()` | Counts characters in a string |
+**Concept:** `LEFT JOIN`
+
+Return each person's first name, last name, city, and state. If no address exists, return `NULL` for city and state.
+
+### Solution
+
+```sql
+SELECT p.firstName, p.lastName, a.city, a.state
+FROM Person p
+LEFT JOIN Address a
+ON p.personId = a.personId;
+````
+
+### Remember
+
+- `LEFT JOIN` keeps all rows from the left table (`Person`).
+- If no matching address exists, `city` and `state` return `NULL`.
+- `ON` specifies how the two tables are matched.
