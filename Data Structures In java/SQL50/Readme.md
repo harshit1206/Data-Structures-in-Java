@@ -107,3 +107,30 @@ ON p.personId = a.personId;
 - `LEFT JOIN` keeps all rows from the left table (`Person`).
 - If no matching address exists, `city` and `state` return `NULL`.
 - `ON` specifies how the two tables are matched.
+
+
+
+# 7. 176. Second Highest Salary
+
+**Concept:** `DISTINCT`, Subquery, `LIMIT`, `OFFSET`
+
+Find the second highest distinct salary. If it doesn't exist, return `NULL`.
+
+## Solution
+
+```sql
+SELECT (
+    SELECT DISTINCT salary
+    FROM Employee
+    ORDER BY salary DESC
+    LIMIT 1 OFFSET 1
+) AS SecondHighestSalary;
+````
+
+Remember:
+
+- `DISTINCT` removes duplicates.
+- `ORDER BY ... DESC` sorts highest to lowest.
+- `LIMIT 1 OFFSET 1` skips the highest salary and selects the second.
+- If no second salary exists, the result is `NULL`.
+
