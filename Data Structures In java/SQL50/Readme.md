@@ -134,3 +134,28 @@ Remember:
 - `LIMIT 1 OFFSET 1` skips the highest salary and selects the second.
 - If no second salary exists, the result is `NULL`.
 
+
+
+# 8. 1581. Customer Who Visited but Did Not Make Any Transactions
+
+**Concept:** `LEFT JOIN`, `IS NULL`, `COUNT()`, `GROUP BY`
+
+Find customers who visited without making any transactions and count these visits.
+
+## Solution
+
+```sql
+SELECT v.customer_id, COUNT(v.visit_id) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+ON t.visit_id = v.visit_id
+WHERE t.transaction_id IS NULL
+GROUP BY v.customer_id;
+````
+
+Remember:
+
+- `LEFT JOIN` keeps all visits, even when no transaction exists.
+- `WHERE t.transaction_id IS NULL` finds visits without transactions.
+- `COUNT(v.visit_id)` counts visits with no transactions.
+- `GROUP BY v.customer_id` gives the count for each customer.
