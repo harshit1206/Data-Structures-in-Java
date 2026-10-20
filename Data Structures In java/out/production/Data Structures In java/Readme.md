@@ -428,3 +428,158 @@ dlroWolleH
 [Click here to view the complete code → `StringBuilder.java`](StringBuilders.java)
 
 ---
+
+
+
+
+# HashMap in Java
+
+## What is a HashMap?
+
+A `HashMap` stores data in **key-value pairs**. Each key is unique and maps to a value. If you insert the same key again, its value gets updated.
+
+## Syntax
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+HashMap<Integer, String> map = new HashMap<>();
+```
+
+- `Integer` — key type
+- `String` — value type
+
+## Important Methods
+
+| Method | Description |
+|---|---|
+| `put(key, value)` | Adds or updates a key-value pair |
+| `get(key)` | Returns the value for a key |
+| `getOrDefault(key, defaultValue)` | Returns the value or a default if the key doesn't exist |
+| `containsKey(key)` | Checks whether a key exists |
+| `containsValue(value)` | Checks whether a value exists |
+| `remove(key)` | Removes a key-value pair |
+| `size()` | Returns the number of entries |
+| `isEmpty()` | Checks whether the map is empty |
+| `clear()` | Removes all entries |
+| `keySet()` | Returns all keys |
+| `values()` | Returns all values |
+| `entrySet()` | Returns all key-value pairs |
+
+## Example
+
+```java
+import java.util.HashMap;
+
+class Main {
+    public static void main(String[] args) {
+        HashMap<String, Integer> marks = new HashMap<>();
+
+        marks.put("Harshit", 90);
+        marks.put("Rahul", 85);
+        marks.put("Aman", 78);
+
+        System.out.println(marks.get("Harshit"));       // 90
+        System.out.println(marks.containsKey("Rahul")); // true
+
+        marks.put("Harshit", 95); // Updates existing value
+        marks.remove("Aman");
+
+        System.out.println(marks.size()); // 2
+    }
+}
+```
+
+## Frequency Map
+
+A frequency map stores each element and the number of times it appears.
+
+### Example
+
+Array: `{1, 2, 2, 3, 1, 2}`
+
+Frequency map: `{1=2, 2=3, 3=1}`
+
+### Code
+
+```java
+import java.util.HashMap;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 3, 1, 2};
+
+        HashMap<Integer, Integer> freq = new HashMap<>();
+
+        for (int num : arr) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        }
+
+        System.out.println(freq);
+    }
+}
+```
+
+### Understanding `getOrDefault()`
+
+```java
+freq.getOrDefault(num, 0)
+```
+
+- If the key exists, returns its current value.
+- If the key doesn't exist, returns `0`.
+
+```java
+freq.put(num, freq.getOrDefault(num, 0) + 1);
+```
+
+Gets the current frequency, increases it by one, and stores the updated value.
+
+## Traversing a HashMap
+
+```java
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " = " + entry.getValue());
+}
+```
+
+- `getKey()` returns the key.
+- `getValue()` returns the value.
+- `entrySet()` provides the key-value entries.
+
+**Note:** A regular `HashMap` does not guarantee iteration order.
+
+## HashMap vs HashSet
+
+| HashMap | HashSet |
+|---|---|
+| Stores key-value pairs | Stores unique elements |
+| Uses `put()` and `get()` | Uses `add()` and `contains()` |
+| Useful for counting frequencies | Useful for checking duplicates |
+
+## Complexity
+
+| Operation | Average Time |
+|---|---|
+| `put()` | `O(1)` |
+| `get()` | `O(1)` |
+| `containsKey()` | `O(1)` |
+| `remove()` | `O(1)` |
+
+These are average-case complexities.
+
+## Remember
+
+- Keys are unique; values can be duplicated.
+- Adding an existing key updates its value.
+- `get()` returns `null` if the key is absent, unless a mapping exists with a null value.
+- `getOrDefault()` is especially useful for frequency maps.
+- HashMap operations generally take `O(1)` average time.
+
+## Practice Questions
+
+1. Count the frequency of each element in an array.
+2. Find the first non-repeating character in a string.
+3. Check whether two strings are anagrams.
+4. Find duplicate elements using a frequency map.
