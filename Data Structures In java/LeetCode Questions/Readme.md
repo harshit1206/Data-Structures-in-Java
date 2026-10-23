@@ -7,6 +7,7 @@ My DSA learning journey and solutions in Java.
 | Problem | Difficulty | Notes |
 |---|---|---|
 | Remove Duplicates from Sorted Array | 🟢 Easy | [26.md](Arrays/26.md) |
+| Plus One | 🟢 Easy | [66.md](Arrays/66.md) |
 | Best Time to Buy and Sell Stock | 🟢 Easy | [121.md](Arrays/121.md) |
 | Best Time to Buy and Sell Stock II | 🟡 Medium | [122.md](Arrays/122.md) |
 | Single Number | 🟢 Easy | [136.md](Arrays/136.md) |
