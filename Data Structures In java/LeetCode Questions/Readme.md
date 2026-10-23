@@ -13,6 +13,7 @@ My DSA learning journey and solutions in Java.
 | Rotate Array | 🟡 Medium | [189.md](Arrays/189.md) |
 | Contains Duplicate | 🟢 Easy | [217.md](Arrays/217.md) |
 | Intersection of Two Arrays | 🟢 Easy | [349.md](Arrays/349.md) |
+| Intersection of Two Arrays II | 🟢 Easy | [350.md](Arrays/350.md) |
 | Find Numbers with Even Number of Digits | 🟢 Easy | [1295.md](Arrays/1295.md) |
 
 
