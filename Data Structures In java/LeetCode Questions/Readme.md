@@ -18,6 +18,8 @@ My DSA learning journey and solutions in Java.
 | 283 | Move Zeroes | 🟢 Easy | [283.md](Arrays/283.md) |
 | 349 | Intersection of Two Arrays | 🟢 Easy | [349.md](Arrays/349.md) |
 | 350 | Intersection of Two Arrays II | 🟢 Easy | [350.md](Arrays/350.md) |
+| 485 | Max Consecutive Ones | 🟢 Easy | [485.md](Arrays/485.md) |
+| 977 | Squares of a Sorted Array | 🟢 Easy | [977.md](Arrays/977.md) |
 | 1886 | Determine Whether Matrix Can Be Obtained By Rotation | 🟢 Easy | [1886.md](Arrays/1886.md) |
 | 1295 | Find Numbers with Even Number of Digits | 🟢 Easy | [1295.md](Arrays/1295.md) |
 
